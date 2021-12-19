@@ -128,11 +128,12 @@ async def remove_username(new_List):
             new_List.remove(i)
     return new_List
   
- async def addFooter(str):
-  footer = """
-    
- Join Our backup channel
-    
-     return str + footer 
+'''async def addFooter(str):
+    footer = """
+    ━━━━━━━━━━━━━━━
+⚙️ How to Download / Watch Online :""" + HOWTO + """
+━━━━━━━━━━━━━━━
+⭐️JOIN CHANNEL ➡️ t.me/""" + CHANNEL
+    return str + footer'''
    
 bot.run()
