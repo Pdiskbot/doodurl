@@ -27,13 +27,13 @@ bot = Client('Droplink bot',
 async def start(bot, message):
     await message.reply(
         f"**Hi {message.chat.first_name}!**\n\n"
-        "I'm doodurl bot. Just send me link and get short link made by @mrpunisher52 and @hornyworld22")
+        "I'm doodurl bot. Just send me link and get short link")
 
 @bot.on_message(filters.command('help') & filters.private)
 async def start(bot, message):
     await message.reply(
         f"**Hello, {message.chat.first_name}!**\n\n"
-        "**If you send post which had doodstream Links, texts & images... Than I'll convert & replace all doodstream links with your doodurl links. dm me @mrpunisher52 For more help-**")
+        "**If you send post which had doodstream Links, texts & images... Than I'll convert & replace all pdisk links with your doodurk links \nMessage me @mrpunisher52 For more help-**")
 
 @bot.on_message(filters.command('support') & filters.private)
 async def start(bot, message):
@@ -111,9 +111,8 @@ async def multi_pdisk_up(ml_string):
         i += 1
 
     new_string = " ".join(new_ml_string)
-    return await addFooter(new_string)
+    #return await addFooter(new_string)
     return (new_string)
- 
 
 async def new_pdisk_url(urls):
     new_urls = []
@@ -121,12 +120,13 @@ async def new_pdisk_url(urls):
         time.sleep(0.2)
         new_urls.append(await pdisk_up(i))
     return new_urls  
-  
-async def remove_username(new_List):
+
+'''async def remove_footer(new_List):
     for i in new_List:
-        if('https://bit.ly/3m4gabB' in i or 'https://bit.ly/pdisk_tuts' in i or '⭐️JOIN CHANNEL ➡️ t.me/hornyworld22' in i):
-            new_List.remove(i)
-    return new_List
+        if('https://t.me/Desi_Bhabhi_Aunty_hot_Video/41' in i):
+            i = i.replace("41","61")
+            #new_List.remove(i)
+    return new_List'''
   
 '''async def addFooter(str):
     footer = """
@@ -135,5 +135,5 @@ async def remove_username(new_List):
 ━━━━━━━━━━━━━━━
 ⭐️JOIN CHANNEL ➡️ t.me/""" + CHANNEL
     return str + footer'''
-   
+        
 bot.run()
