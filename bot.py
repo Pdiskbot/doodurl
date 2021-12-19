@@ -27,13 +27,13 @@ bot = Client('Droplink bot',
 async def start(bot, message):
     await message.reply(
         f"**Hi {message.chat.first_name}!**\n\n"
-        "I'm ddroplink bot. Just send me link and get short link made by @mrpunisher52 and @hornyworld22")
+        "I'm doodurl bot. Just send me link and get short link made by @mrpunisher52 and @hornyworld22")
 
 @bot.on_message(filters.command('help') & filters.private)
 async def start(bot, message):
     await message.reply(
         f"**Hello, {message.chat.first_name}!**\n\n"
-        "**If you send post which had doodstream Links, texts & images... Than I'll convert & replace all doodstream links with your droplink links. dm me @mrpunisher52 For more help-**")
+        "**If you send post which had doodstream Links, texts & images... Than I'll convert & replace all doodstream links with your doodurl links. dm me @mrpunisher52 For more help-**")
 
 @bot.on_message(filters.command('support') & filters.private)
 async def start(bot, message):
@@ -72,7 +72,7 @@ async def pdisk_uploader(bot, message):
     
 async def pdisk_up(link):
     if ('pdisk' in link or 'kuklink' in link or 'kofilink' in link or 'cofilink' in link or 'bit' in link or 'vdshort' in link or 'vidrivers' in link or 'dplinks' in link or 'wslinker' in link or 'cdinks' in link or 'dropxer' in link or 'dood' in link):
-        url = 'https://droplink.co/api'
+        url = 'https://doodurl.in/api'
         params = {'api': API_KEY, 'url': link}
     
         async with aiohttp.ClientSession() as session:
@@ -128,12 +128,12 @@ async def remove_username(new_List):
             new_List.remove(i)
     return new_List
   
-async def addFooter(str):
-    footer = """
+# async def addFooter(str):
+#     footer = """
     
-   ━━━━━━━━━━━
-  ⚙️ How to Download / Watch Online : """ + HOWTO
+#    ━━━━━━━━━━━
+#   ⚙️ How to Download / Watch Online : """ + HOWTO
     
-    return str + footer
+#     return str + footer 
    
 bot.run()
